@@ -17,7 +17,7 @@ The provided config file 'pytest.ini' is used to specify test paths, fixture mar
 
 
 
-DIRECTORY STRUCTURE
+DIRECTORY TREE
 -------------------------------
 
 neptune.ai_assignment/
