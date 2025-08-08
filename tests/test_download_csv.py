@@ -34,7 +34,7 @@ def test_download_csv(page):
         assert re.match("eval_metrics_loss.csv", download.suggested_filename)
 
         file_name = download.suggested_filename # <-- maintaining original file name for verification
-        destination_folder_path = "downloads"
+        destination_folder_path = "test_files"
         file = (os.path.join(destination_folder_path, file_name))
         download.save_as(file)
 

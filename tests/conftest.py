@@ -1,7 +1,6 @@
-import pytest, json, os
+import pytest
 from playwright.sync_api import sync_playwright
-from pathlib import Path
-from pages.single_run import Common, Attributes
+from pages.single_run import Common
 
 BASE_URL = "https://scale.neptune.ai/o/examples/org/LLM-Pretraining/runs/details?viewId=standard-view&detailsTab=attributes&runIdentificationKey=llm_train-v945&type=experiment&compare=uMlyIDUTmecveIHVma0eEB95Ei5xu8F_9qHOh0nynbtM"
 
@@ -14,7 +13,7 @@ def browser(request):
     with sync_playwright() as playwright:
         launch_args = {
             "headless": False,
-            "slow_mo": 1200
+            "slow_mo": 2000
             }
 
         launchers = {
