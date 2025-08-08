@@ -1,9 +1,11 @@
-import pytest, json
+import pytest, json, os
 from playwright.sync_api import expect
 from pages.single_run import Attributes, Common
 
 
-with open("test_files\\attributes.json") as f:
+path = os.path.join("test_files", "attributes.json")
+
+with open(path) as f:
     attribute_data = json.load(f)
 
 
