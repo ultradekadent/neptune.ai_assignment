@@ -2,14 +2,14 @@ INTRODUCTION
 -------------------------------
 The technical basis for the test automation part is Playwright and Pytest (Python).
 
-The main use cases are covered by five tests:
+The solution is comprised of five test cases:
 	- test_attr_values_match_expected_data.py
 	- test_download_csv.py
 	- test_download_png.py
 	- test_navigate_tree.py
 	- test_search_attribute.py
 
-There is also a 'conftest.py' file containing shared fixtures, as well as a Page Object Model called 'single_run.py'.
+A 'conftest.py' file containing shared fixtures, and a Page Object Model called 'single_run.py' are also included.
 
 The 'attributes.json' from the 'test_files' folder is needed for 'test_attr_values_match_expected_data.py' to succeed.
 
@@ -123,7 +123,7 @@ To execute all tests, run
 
 	pytest -s -k 'attributes'
 
-(The -s option is only needed for 'test_download_csv' to display contents of the downloaded CSV file.
+The -s option is only needed for 'test_download_csv' to display contents of the downloaded CSV file.
 	
 	
 You can execute tests in verbose mode by adding the '-v' option, e.g.
@@ -154,7 +154,7 @@ NOTES
 
 2.	All browser interactions (clicks, typing, and navigation) will be significantly slowed down by default, to give you a chance to see what is happening on the screen. To speed things up, comment line #16 of the 'conftest.py' file, or decrease the associated value.
 	
-3.	Although the framework support cross-browser testing, all tests will be executed in Chromium by default. This can be changed by modifying the parameter(s) in line #9 of the 'conftest.py' file.
+3.	Although the framework supports cross-browser testing, all tests will be executed in Chromium by default. This can be changed by modifying the parameter(s) in line #9 of the 'conftest.py' file.
 	
 The supported browsers are:
 	- chromium
