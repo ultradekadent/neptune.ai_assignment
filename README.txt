@@ -121,14 +121,30 @@ RUNNING THE TESTS
 
 To execute all tests, run
 
-	pytest -s -k 'attribute'
+	pytest -s -k 'attributes'
 
 (The -s option is only needed for 'test_download_csv' to display contents of the downloaded CSV file.
 	
 	
 You can execute tests in verbose mode by adding the '-v' option, e.g.
 
-	pytest -v -s -k 'attribute'
+	pytest -v -s -k 'attributes'
+	
+
+You can run individual tests by using their pytest decorators metadata (or parts thereof) i.e.:
+
+	- attributes_match_data
+    - attributes_navigate_tree
+    - attributes_search
+    - attributes_download_png
+    - attributes_download_csv
+
+For example:
+
+	pytest -k 'match'
+	pytest -s -k 'csv'
+	pytest -k 'navigate'
+    
 	
 
 NOTES
