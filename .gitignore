@@ -1,0 +1,8 @@
+url
+.venv
+.pytest_cache
+.vscode
+downloads/eval_metrics_loss.csv
+downloads/eval_metrics_loss.png
+pages/__pycache__
+tests/__pycache__

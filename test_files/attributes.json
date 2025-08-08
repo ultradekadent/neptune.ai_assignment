@@ -1,0 +1,26 @@
+[
+  {
+    "name": "prompt",
+    "path": "eval",
+    "type": "string",
+    "value": "What is the role of machine learning in modern scientific discovery?"
+  },
+  {
+    "name": "vocab_size",
+    "path": "config/tokenizer",
+    "type": "integer",
+    "value": "32768"
+  },
+  {
+    "name": "packing",
+    "path": "config/data",
+    "type": "boolean",
+    "value": "True"
+  },
+  {
+    "name": "creation_time",
+    "path": "sys",
+    "type": "datetime",
+    "value": "2025/07/18 12:55:09"
+  }
+]
