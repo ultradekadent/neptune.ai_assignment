@@ -150,7 +150,7 @@ For example:
 NOTES
 -------------------------------
 
-1.	All tests will run in headed mode by default. To run in headless mode, comment out line #15 of the 'conftest.py' file.
+1.	All tests will be executed in headed mode by default. To run them in headless mode, comment out line #15 of the 'conftest.py' file.
 
 2.	All browser interactions (clicks, typing, and navigation) will be significantly slowed down by default, to give you a chance to see what is happening on the screen. To speed things up, comment line #16 of the 'conftest.py' file, or decrease the associated value.
 	
@@ -163,6 +163,6 @@ The supported browsers are:
 	- msedge
 	- webkit (safari)
 	
-4.	The tests appear to be pretty robust, however I have introduced a retry logic, just in case. If any of the tests fails, Pytest will re-execute it 3 times with 5-second intervals.
+4.	The tests appear to be pretty robust, however I have introduced a retry logic, just in case. If a test fails, Pytest will re-execute it 3 times with 5-second intervals.
 
 GOOD LUCK!
