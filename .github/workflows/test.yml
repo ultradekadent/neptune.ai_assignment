@@ -1,7 +1,5 @@
-name: neptune.ai assignment test
-
-on:
-  - [push, workflow_dispatch]
+name: Run tests
+on: [push, workflow_dispatch]
 jobs:
   test:
     runs-on: ubuntu-latest
