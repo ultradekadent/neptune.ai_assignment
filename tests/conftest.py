@@ -12,8 +12,8 @@ def browser(request):
 
     with sync_playwright() as playwright:
         launch_args = {
-            "headless": False,
-            "slow_mo": 2000
+            "headless": True,
+            # "slow_mo": 2000
             }
 
         launchers = {
