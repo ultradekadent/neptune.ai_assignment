@@ -1,0 +1,25 @@
+name: neptune.ai assignment test
+
+on:
+  - push
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Ensure browsers are installed
+        run: python -m playwright install chromium --with-deps
+
+      - name: Run tests
+        run: |
+          pytest -v -s

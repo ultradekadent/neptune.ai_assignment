@@ -17,7 +17,7 @@ def test_attr_values_match_expected_data(page, attr):
     common_selectors=Common(page)
 
     # Assert that the 'Attributes' tab is visible within 10 seconds
-    expect(attr_selectors.attributes_tab).to_be_visible(timeout=10_000)
+    expect(attr_selectors.attributes_tab).to_be_visible(timeout=30_000)
 
     # Input the attribute path and name in the search bar
     attr_selectors.search_bar.fill(attr["path"]+("/")+attr["name"])
@@ -26,4 +26,4 @@ def test_attr_values_match_expected_data(page, attr):
     attr_selectors.matching_items.first.click()
 
     # Assert that the attribute value matches expected data.
-    expect(attr_selectors.preview_content).to_have_text(attr["value"], timeout=10_000)
+    expect(attr_selectors.preview_content).to_have_text(attr["value"], timeout=30_000)
